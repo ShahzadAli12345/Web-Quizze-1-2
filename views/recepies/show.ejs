@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head") %>
+  </head>
+  <body>
+    <%- include("../partials/navbar") %>
+
+    <div class="container">
+      <h1>Top Recepies</h1>
+      <a class="btn btn-primary" href="/recepie/new">Create New Recepie</a>
+
+      <h3><%= foundRecepie.title %></h3>
+      <img src="<%= foundRecepie.img %> " alt="" />
+      <p><%= foundRecepie.text %></p>
+      <hr />
+    </div>
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>

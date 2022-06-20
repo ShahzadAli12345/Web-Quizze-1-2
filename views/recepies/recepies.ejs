@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head") %>
+  </head>
+  <body>
+    <%- include("../partials/navbar") %>
+
+    <div class="container">
+      <h1>Top Recepies</h1>
+      <a class="btn btn-primary" href="/recepie/new">Create New Recepie</a>
+
+      <% for(let recepie of recepies){%>
+      <h3><%= recepie.title %></h3>
+      <img src="<%= recepie.img %> " alt="" />
+      <p><%= recepie.text %></p>
+
+      <a class="btn btn-primary" href="/recepie-edit/<%= recepie.id %> "
+        >Edit</a
+      >
+      <a class="btn btn-danger" href="/recepie-delete/<%= recepie.id %> "
+        >Delete</a
+      >
+      <hr />
+      <% } %>
+    </div>
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>
